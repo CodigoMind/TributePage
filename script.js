@@ -7,15 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       wait: '0.8s',
       move: '20px' });
 
-  /*var config = {
-  //    enter: 'right',
-      wait: '0.5s',
-      move: '20px'
-  }
-
-  new scrollReveal(config);*/
-
-
   // Progress bar 
   let processScroll = () => {
     let docElem = document.documentElement, 
@@ -24,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
       scrollPercent = scrollTop / scrollBottom * 100 + '%';
     
-    // console.log(scrollTop + ' / ' + scrollBottom + ' / ' + scrollPercent);
+    //console.log(scrollTop + ' / ' + scrollBottom + ' / ' + scrollPercent);
     
       document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
   }

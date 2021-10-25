@@ -5,6 +5,7 @@
 	text-align: center;
 }
 
+/*set variables to keep the main colors*/
 :root {
 	--primaryColor: #06224A;
 	--secondaryColor: #8FBAF3;
@@ -15,117 +16,17 @@
 	--shadowColor: #cccccc;
 }
 
-
-/*
-header {
-	background-color: #06224A;
-}
-*/
-
 body {
 	background-color: var(--primaryColor);
 	color: var(--fourthColor);
-	font-family: Noto Sans,sans-serif !important;
+	font-family: Noto Sans, sans-serif !important;
 	font-size: 16px;
 	line-height: 1.4em;
 	min-width: 300px;
 	width: 100%;	
 }
 
-header {
-	position: fixed;
-	top: 0;
-	background-color: var(--primaryColor);
-	z-index: 2;
-	width: 100%;
-}
-
-#progress-bar {
-	--scrollAmount: 0%;
-	background-color: var(--secondaryColor);
-	width: var(--scrollAmount);
-	height: 10px;
-	position: fixed;
-	top: 0;
-	z-index: 4;
-}
-
-
-section#content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;	
-}
-
-
-/*
-footer {
-	background-color: #06224A;
-}*/
-
-div#img-div {
-	background-color: var(--tertiaryColor);
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-	padding: 0px 10px;
-	width:100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;	
-	margin-top: 110px;
-}
-
-
-figure#image-pv {
-	background-color: var(--primaryColor);
-	/*width: 730px;*/
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	margin: 10px;
-	padding: 10px;
-	box-shadow: 0 0 20px var(--primaryColor);
-	-mox-box-shadow: 0 0 20px var(--primaryColor);
-	-webkit-box-shadow: 0 0 20px var(--primaryColor);
-	width: 720px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;	
-}
-
-#image {
-	/*max-width: 700px;*/
-	max-width: 98%;
-	border-radius: 10px;
-	width: 98%;
-}
-
-section#content *{
-	max-width: 650px;
-	margin: 25px 15px;
-}
-
-/*
-section#content li, p, h2 {
-
-}
-*/
-
-section#content li {
-	color: var(--primaryColor);
-	background-color: var(--fourthColor);
-	padding: 5px 15px;
-	/*border: 5px solid #8FBAF3;*/
-	box-shadow: 0 0 5px var(--fourthColor);
-	-mox-box-shadow: 0 0 5px var(--fourthColor);
-	-webkit-box-shadow: 0 0 5px var(--fourthColor);
-	border-radius: 15px;
-	list-style-type: none;
-}
-
-
+/*general configurations*/
 h1, h2, h3, h4, h5, h6 {
 	color: var(--secondaryColor);
 	margin: 0.8em;
@@ -133,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 32px;
-	text-align: center;
 }
 
 h2 {
@@ -157,10 +57,89 @@ a:visited{
 	color: var(--colorLinksRGB);
 }
 
-p#begin {
-	text-align: center;
+header {
+	position: fixed;
+	top: 0;
+	background-color: var(--primaryColor);
+	z-index: 2;
+	width: 100%;
 }
 
+/*set the behavior of the progress bar*/
+#progress-bar {
+	--scrollAmount: 0%;
+	background-color: var(--secondaryColor);
+	width: var(--scrollAmount);
+	height: 10px;
+	position: fixed;
+	top: 0;
+	z-index: 4;
+}
+
+
+/*------------styles to the image-----------------*/
+div#img-div {
+	background-color: var(--tertiaryColor);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	padding: 0px 10px;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;	
+	margin-top: 110px;
+}
+
+
+figure#image-pv {
+	background-color: var(--primaryColor);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+	box-shadow: 0 0 20px var(--primaryColor);
+	-mox-box-shadow: 0 0 20px var(--primaryColor);
+	-webkit-box-shadow: 0 0 20px var(--primaryColor);
+	width: 720px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+
+#image {
+	border-radius: 10px;
+	width: 98%;
+}
+
+/*------------styles to the content of the page-----------------*/
+/*center the elements*/
+section#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+
+section#content *{
+	max-width: 650px;
+	margin: 25px 15px;
+}
+
+section#content li {
+	color: var(--primaryColor);
+	background-color: var(--fourthColor);
+	padding: 5px 15px;
+	box-shadow: 0 0 5px var(--fourthColor);
+	-mox-box-shadow: 0 0 5px var(--fourthColor);
+	-webkit-box-shadow: 0 0 5px var(--fourthColor);
+	border-radius: 15px;
+	list-style-type: none;
+}
+
+
+/*------------styles to the blockquotes-----------------*/
 q {
 	quotes: "“" "”" "‘" "’";
 }
@@ -168,11 +147,6 @@ q {
 q::before {
     content: open-quote;
 }
-
-q::after {
-    content: close-quote;
-}
-
 
 blockquote {
 	background: var(--fourthColor, rgb(255, 255, 255));
@@ -196,32 +170,7 @@ blockquote:before {
 }
 
 
-/*
-@media (max-width: 768px) { 
-	figure#image-pv {
-		width: 700px;
-	}
-	
-	section#content *{
-		max-width: 450px;
-		/*min-width: 300px;
-	}
-	
-}
-
-@media (max-width: 414px) { 
-	figure#image-pv {
-		width: 340px;
-	}
-}
-
-@media (max-width: 360px) { 
-	figure#image-pv {
-		width: 320px;
-	}
-}
-*/
-
+/*------------ add web responsive-----------------*/
 @media (max-width: 280px) {
 	h1 {
 		font-size: 28px;
@@ -243,16 +192,6 @@ blockquote:before {
 	figure#image-pv {
 		width: 90%;
 	}
-}
-
-/*Dispositivos medianos*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-
-}
-
-/*Dispositivos grandes*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
 }
 
 /*Dispositivos extra grandes*/
